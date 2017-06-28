@@ -273,184 +273,184 @@ function initLambert() {
         }
     });
 	// map ------------------
-    $("#map-canvas").gmap3({
-        action: "init",
-        marker: {
-			// markers and locations------------------
-            values: [ {
-                latLng: [ 24.824569, 92.8009729],
-                data: "Renu Bakery  - The Best in town",
-                options: {
-                    icon: "images/marker.png"
-                }
-            }],
-            options: {
-                draggable: false
-            },
-            events: {
-                mouseover: function(a, b, c) {
-                    var d = $(this).gmap3("get"), e = $(this).gmap3({
-                        get: {
-                            name: "infowindow"
-                        }
-                    });
-                    if (e) {
-                        e.open(d, a);
-                        e.setContent(c.data);
-                    } else $(this).gmap3({
-                        infowindow: {
-                            anchor: a,
-                            options: {
-                                content: c.data
-                            }
-                        }
-                    });
-                },
-                mouseout: function() {
-                    var a = $(this).gmap3({
-                        get: {
-                            name: "infowindow"
-                        }
-                    });
-                    if (a) a.close();
-                }
-            }
-        },
-        map: {
-            options: {
-                zoom: 14,
-                zoomControl: true,
-                mapTypeControl: true,
-                scaleControl: true,
-                scrollwheel: false,
-                streetViewControl: true,
-                draggable: true,
-                styles: [ {
-                    featureType: "all",
-                    elementType: "labels.text",
-                    stylers: [ {
-                        weight: "0.04"
-                    }, {
-                        visibility: "simplified"
-                    } ]
-                }, {
-                    featureType: "administrative.locality",
-                    elementType: "all",
-                    stylers: [ {
-                        hue: "#C59D5F"
-                    }, {
-                        saturation: 7
-                    }, {
-                        lightness: 19
-                    }, {
-                        visibility: "on"
-                    } ]
-                }, {
-                    featureType: "administrative.locality",
-                    elementType: "labels.text",
-                    stylers: [ {
-                        hue: "#ffde00"
-                    } ]
-                }, {
-                    featureType: "landscape",
-                    elementType: "all",
-                    stylers: [ {
-                        hue: "#ffffff"
-                    }, {
-                        saturation: -100
-                    }, {
-                        lightness: 100
-                    }, {
-                        visibility: "simplified"
-                    } ]
-                }, {
-                    featureType: "poi",
-                    elementType: "all",
-                    stylers: [ {
-                        hue: "#C59D5F"
-                    }, {
-                        saturation: -100
-                    }, {
-                        lightness: 100
-                    }, {
-                        visibility: "off"
-                    } ]
-                }, {
-                    featureType: "road",
-                    elementType: "geometry",
-                    stylers: [ {
-                        hue: "#C59D5F"
-                    }, {
-                        saturation: -93
-                    }, {
-                        lightness: 31
-                    }, {
-                        visibility: "simplified"
-                    } ]
-                }, {
-                    featureType: "road",
-                    elementType: "labels",
-                    stylers: [ {
-                        hue: "#C59D5F"
-                    }, {
-                        saturation: -93
-                    }, {
-                        lightness: 31
-                    }, {
-                        visibility: "on"
-                    } ]
-                }, {
-                    featureType: "road.arterial",
-                    elementType: "labels",
-                    stylers: [ {
-                        hue: "#C59D5F"
-                    }, {
-                        saturation: -93
-                    }, {
-                        lightness: -2
-                    }, {
-                        visibility: "simplified"
-                    } ]
-                }, {
-                    featureType: "road.local",
-                    elementType: "geometry",
-                    stylers: [ {
-                        hue: "#C59D5F"
-                    }, {
-                        saturation: -90
-                    }, {
-                        lightness: -8
-                    }, {
-                        visibility: "simplified"
-                    } ]
-                }, {
-                    featureType: "transit",
-                    elementType: "all",
-                    stylers: [ {
-                        hue: "#C59D5F"
-                    }, {
-                        saturation: 10
-                    }, {
-                        lightness: 69
-                    }, {
-                        visibility: "on"
-                    } ]
-                }, {
-                    featureType: "water",
-                    elementType: "all",
-                    stylers: [ {
-                        hue: "#C59D5F"
-                    }, {
-                        saturation: -78
-                    }, {
-                        lightness: 67
-                    }, {
-                        visibility: "simplified"
-                    } ]
-                } ]
-            }
-        }
-    });
+   //  $("#map-canvas").gmap3({
+   //      action: "init",
+   //      marker: {
+			// // markers and locations------------------
+   //          values: [ {
+   //              latLng: [ 24.824569, 92.8009729],
+   //              data: "Renu Bakery  - The Best in town",
+   //              options: {
+   //                  icon: "images/marker.png"
+   //              }
+   //          }],
+   //          options: {
+   //              draggable: false
+   //          },
+   //          events: {
+   //              mouseover: function(a, b, c) {
+   //                  var d = $(this).gmap3("get"), e = $(this).gmap3({
+   //                      get: {
+   //                          name: "infowindow"
+   //                      }
+   //                  });
+   //                  if (e) {
+   //                      e.open(d, a);
+   //                      e.setContent(c.data);
+   //                  } else $(this).gmap3({
+   //                      infowindow: {
+   //                          anchor: a,
+   //                          options: {
+   //                              content: c.data
+   //                          }
+   //                      }
+   //                  });
+   //              },
+   //              mouseout: function() {
+   //                  var a = $(this).gmap3({
+   //                      get: {
+   //                          name: "infowindow"
+   //                      }
+   //                  });
+   //                  if (a) a.close();
+   //              }
+   //          }
+   //      },
+   //      map: {
+   //          options: {
+   //              zoom: 14,
+   //              zoomControl: true,
+   //              mapTypeControl: true,
+   //              scaleControl: true,
+   //              scrollwheel: false,
+   //              streetViewControl: true,
+   //              draggable: true,
+   //              styles: [ {
+   //                  featureType: "all",
+   //                  elementType: "labels.text",
+   //                  stylers: [ {
+   //                      weight: "0.04"
+   //                  }, {
+   //                      visibility: "simplified"
+   //                  } ]
+   //              }, {
+   //                  featureType: "administrative.locality",
+   //                  elementType: "all",
+   //                  stylers: [ {
+   //                      hue: "#C59D5F"
+   //                  }, {
+   //                      saturation: 7
+   //                  }, {
+   //                      lightness: 19
+   //                  }, {
+   //                      visibility: "on"
+   //                  } ]
+   //              }, {
+   //                  featureType: "administrative.locality",
+   //                  elementType: "labels.text",
+   //                  stylers: [ {
+   //                      hue: "#ffde00"
+   //                  } ]
+   //              }, {
+   //                  featureType: "landscape",
+   //                  elementType: "all",
+   //                  stylers: [ {
+   //                      hue: "#ffffff"
+   //                  }, {
+   //                      saturation: -100
+   //                  }, {
+   //                      lightness: 100
+   //                  }, {
+   //                      visibility: "simplified"
+   //                  } ]
+   //              }, {
+   //                  featureType: "poi",
+   //                  elementType: "all",
+   //                  stylers: [ {
+   //                      hue: "#C59D5F"
+   //                  }, {
+   //                      saturation: -100
+   //                  }, {
+   //                      lightness: 100
+   //                  }, {
+   //                      visibility: "off"
+   //                  } ]
+   //              }, {
+   //                  featureType: "road",
+   //                  elementType: "geometry",
+   //                  stylers: [ {
+   //                      hue: "#C59D5F"
+   //                  }, {
+   //                      saturation: -93
+   //                  }, {
+   //                      lightness: 31
+   //                  }, {
+   //                      visibility: "simplified"
+   //                  } ]
+   //              }, {
+   //                  featureType: "road",
+   //                  elementType: "labels",
+   //                  stylers: [ {
+   //                      hue: "#C59D5F"
+   //                  }, {
+   //                      saturation: -93
+   //                  }, {
+   //                      lightness: 31
+   //                  }, {
+   //                      visibility: "on"
+   //                  } ]
+   //              }, {
+   //                  featureType: "road.arterial",
+   //                  elementType: "labels",
+   //                  stylers: [ {
+   //                      hue: "#C59D5F"
+   //                  }, {
+   //                      saturation: -93
+   //                  }, {
+   //                      lightness: -2
+   //                  }, {
+   //                      visibility: "simplified"
+   //                  } ]
+   //              }, {
+   //                  featureType: "road.local",
+   //                  elementType: "geometry",
+   //                  stylers: [ {
+   //                      hue: "#C59D5F"
+   //                  }, {
+   //                      saturation: -90
+   //                  }, {
+   //                      lightness: -8
+   //                  }, {
+   //                      visibility: "simplified"
+   //                  } ]
+   //              }, {
+   //                  featureType: "transit",
+   //                  elementType: "all",
+   //                  stylers: [ {
+   //                      hue: "#C59D5F"
+   //                  }, {
+   //                      saturation: 10
+   //                  }, {
+   //                      lightness: 69
+   //                  }, {
+   //                      visibility: "on"
+   //                  } ]
+   //              }, {
+   //                  featureType: "water",
+   //                  elementType: "all",
+   //                  stylers: [ {
+   //                      hue: "#C59D5F"
+   //                  }, {
+   //                      saturation: -78
+   //                  }, {
+   //                      lightness: 67
+   //                  }, {
+   //                      visibility: "simplified"
+   //                  } ]
+   //              } ]
+   //          }
+   //      }
+   //  });
 	// contact form------------------
     $("#contactform").submit(function() {
         var a = $(this).attr("action");
